@@ -1,11 +1,6 @@
 ﻿using CRM.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CRM.Persistence.Configuration
 {
@@ -49,7 +44,7 @@ namespace CRM.Persistence.Configuration
 
             builder.Property(c => c.IdentityNumber)
                 .HasMaxLength(11); // TC No sabit 11 hane
-                //.IsFixedLength();  char(11) olarak tutar, performansı artırır.
+                                   //.IsFixedLength();  char(11) olarak tutar, performansı artırır.
 
             builder.Property(c => c.TaxNumber)
                 .HasMaxLength(20); // Yabancı vergi noları uzun olabilir

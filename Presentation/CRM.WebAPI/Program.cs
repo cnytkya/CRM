@@ -1,4 +1,9 @@
+using CRM.Persistence.Context;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CrmDbContext>(opt=>opt.UseSqlServer(builder.Configuration.GetConnectionString("sqlconnection")));
 
 // Add services to the container.
 
