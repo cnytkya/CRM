@@ -1,4 +1,5 @@
 ﻿using CRM.Domain.Common;
+using CRM.Domain.Enums;
 
 namespace CRM.Domain.Entities;
 
@@ -14,7 +15,7 @@ public class Address : BaseEntity
     public string Title { get; set; } = default!;
 
     // Fatura mı, Teslimat adresi mi?
-    //public AddressType AddressType { get; set; } = AddressType.Billing;
+    public AddressType AddressType { get; set; } = AddressType.Billing;
 
     // --- Konum Detayları ---
     public string Country { get; set; } = "Türkiye"; // Varsayılan değer

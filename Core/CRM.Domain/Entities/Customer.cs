@@ -1,8 +1,9 @@
-﻿using CRM.Domain.Enums;
+﻿using CRM.Domain.Common;
+using CRM.Domain.Enums;
 
 namespace CRM.Domain.Entities
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
         // --- Temel Kimlik Bilgileri ---
         public string FirstName { get; set; } = default!;
